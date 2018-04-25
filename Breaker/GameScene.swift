@@ -1,16 +1,3 @@
-//
-//  GameScene.swift
-//  Breaker
-//
-//  Created by Victor Castaneda on 4/21/18.
-//  Copyright © 2018 Victor Castaneda. All rights reserved.
-// Victor Castaneda
-
-
-
-
-//Hey Victor!
-//Hey Josh!
 import SpriteKit
 import GameplayKit
 
@@ -56,15 +43,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 contact.bodyB.node?.removeFromParent()
             }
         }
-            if bodyAname == "Ball" && bodyBname == "BrickTwo" || bodyAname == "BrickTwo" && bodyBname == "Ball" {
+        if bodyAname == "Ball" && bodyBname == "BrickTwo" || bodyAname == "BrickTwo" && bodyBname == "Ball" {
             if bodyAname == "BrickTwo" {
                 contact.bodyA.node?.removeFromParent()
             }
             else if bodyBname == "BrickTwo" {
                 contact.bodyB.node?.removeFromParent()
             }
-            }
-            if bodyAname == "Ball" && bodyBname == "BrickThree" || bodyAname == "BrickThree" && bodyBname == "Ball"{
+        }
+        if bodyAname == "Ball" && bodyBname == "BrickThree" || bodyAname == "BrickThree" && bodyBname == "Ball"{
             if bodyAname == "BrickThree" {
                 contact.bodyA.node?.removeFromParent()
             }
@@ -81,11 +68,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         if bodyAname == "Ball" && bodyBname == "loseZone" || bodyAname == "loseZone" && bodyBname == "Ball"{
-            if bodyAname == "Ball"{
-                contact.bodyA.node?.removeFromParent()
+            if bodyAname == "loseZone"{
+                contact.bodyB.node?.removeFromParent()
             }
         }
-}
+    }
     
 }
 
